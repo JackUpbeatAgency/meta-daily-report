@@ -23,7 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Report Script
-        env:
-          YOUR_ENV_VAR: ${{ secrets.YOUR_ENV_VAR }}
-        run: python main.py
+      - name: Load .env and Run Script
+        run: |
+          set -a
+          source .env
+          set +a
+          python main.py
