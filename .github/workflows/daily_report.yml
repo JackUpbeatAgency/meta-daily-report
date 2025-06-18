@@ -2,7 +2,8 @@ name: Daily Meta Report Email
 
 on:
   schedule:
-    - cron: '* * * * * *'  # Every  minutes
+    - cron: '* * * * *'  # Runs every 1 minute
+  workflow_dispatch:      # Allows manual trigger
 
 jobs:
   send_report:
