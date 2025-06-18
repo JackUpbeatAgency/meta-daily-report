@@ -2,8 +2,7 @@ name: Daily Meta Report Email
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes
-  workflow_dispatch:       # Allow manual runs from GitHub UI
+    - cron: '* * * * * *'  # Every  minutes
 
 jobs:
   send_report:
